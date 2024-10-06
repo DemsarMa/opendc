@@ -57,3 +57,11 @@ tasks.register<Test>("testsOn19") {
 
     useJUnitPlatform()
 }
+
+tasks.register<Test>("testsOn21") {
+    javaLauncher.set(javaToolchains.launcherFor {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    })
+
+    useJUnitPlatform()
+}
